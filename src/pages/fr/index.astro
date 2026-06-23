@@ -10,138 +10,127 @@ import TestimonialsSection from '@components/sections/testimonials/TestimonialsS
 import PricingSection from '@components/sections/pricing/PricingSection.astro';
 import FAQ from '@components/sections/misc/FAQ.astro';
 import AnnouncementBanner from '@components/ui/banners/AnnouncementBanner.astro';
-import heroImage from '@images/hero-image.avif';
+import heroImage from '@images/homepage_boat.png';
 import faqs from '@data/fr/faqs.json';
 import features from '@data/fr/features.json';
 import pricing from '@data/fr/pricing.json';
-import featureImage from '@images/features-image.avif';
-import construction from '@images/construction-image.avif';
-import tools from '@images/automated-tools.avif';
-import dashboard from '@images/dashboard-image.avif';
+import featureImage from '@images/features-image.png';
+import construction from '@images/marine_deck4.jpg';
+import tools from '@images/process_1.jpg';
+import dashboard from '@images/welds_3.jpg';
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import { partnersData } from '@/data_files/constants';
-
-const avatarSrcs: Array<string> = [
-  'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80',
-  'https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80',
-  'https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80',
-  'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80',
-];
 ---
 
 <MainLayout lang="fr">
   <AnnouncementBanner
     btnId="dismiss-button"
-    btnTitle="Découvrez ScrewFast sur GitHub"
-    url="https://github.com/mearashadowfax/ScrewFast"
+    title="Besoin de soudure marine, de fabrication sur mesure ou de plancher UltraDeck pour votre bateau ?"
+    btnTitle="Demander un devis"
+    url={getRelativeLocaleUrl('fr', 'contact')}
   />
 
   <HeroSection
-    title=`Équipez vos projets avec <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>`
-    subTitle="Outils matériels de haute qualité et services de construction experts pour tous les besoins en projet."
-    primaryBtn="Commencez à explorer"
-    primaryBtnURL={getRelativeLocaleUrl('fr', 'products')}
-    secondaryBtn="Contacter l'équipe commerciale"
+    title=`Construction de <span class="text-orange-400 dark:text-orange-300">bateaux sur mesure</span>, reparations marines et planchers UltraDeck`
+    subTitle="Atelier de soudure et de fabrication marine specialise dans la construction de bateaux sur mesure, les reparations structurelles, les pieces fabriquees, les reservoirs de carburant et les planchers marins UltraDeck pour les petites chaloupes jusqu'aux bateaux oceaniques de 40 pieds."
+    primaryBtn="Voir les services"
+    primaryBtnURL={getRelativeLocaleUrl('fr', 'services')}
+    secondaryBtn="Demander un devis"
     secondaryBtnURL={getRelativeLocaleUrl('fr', 'contact')}
-    withReview={true}
-    avatars={avatarSrcs}
-    rating=`<span class="font-bold">4.8</span> / 5`
-    starCount={4}
-    reviews=`À partir de plus de <span class="font-bold">12,8k</span> avis`
     src={heroImage}
-    alt="Pile de boîtes de produits ScrewFast contenant des outils matériels assortis"
+    alt="Bateau en aluminium sur mesure illustrant le savoir-faire de fabrication marine"
   />
 
   <ClientsSection
-    title="Faites confiance aux leaders de l'industrie"
-    subTitle="Découvrez la fiabilité choisie par les géants de l'industrie."
+    title="Pour les proprietaires de bateaux, capitaines et equipages"
+    subTitle="Fabrication marine fiable pour bateaux de loisir, de travail et offshore."
     partners={partnersData}
   />
 
   <FeaturesGeneral
-    title="Répondre aux exigences de l'industrie"
-    subTitle="Chez ScrewFast, nous relevons les défis uniques rencontrés dans les secteurs du matériel et de la construction. Des outils de pointe aux services experts, nous sommes déterminés à vous aider à surmonter les obstacles et à atteindre vos objectifs."
+    title="Une fabrication marine qui resout les vrais problemes de bateaux"
+    subTitle="Nous construisons et reparons des bateaux en aluminium avec une approche pratique et centree sur le milieu marin. Que vous ayez besoin d'une coque sur mesure, d'un tableau arriere repare, d'un support fabrique ou d'un nouveau reservoir, notre atelier livre un travail durable concu pour la vie sur l'eau."
     src={featureImage}
-    alt="Produits ScrewFast dans des boîtes flottantes"
+    alt="Travail de fabrication marine et de reparation de bateau"
     features={features}
   />
 
   <FeaturesNavs
-    title=`Personnalisez les offres de <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span> pour répondre parfaitement à vos besoins en matériel et en construction.`
+    title=`Trois services principaux pour les <span class="text-orange-400 dark:text-orange-300">travaux marins serieux</span>.`
     tabs={[
       {
-        heading: 'Outils de pointe',
+        heading: 'Construction de bateaux sur mesure',
         content:
-          "Optimisez vos projets avec les outils de pointe de ScrewFast. Faites l'expérience d'une efficacité accrue dans la gestion de la construction avec nos solutions automatisées sophistiquées.",
+          "Des petites chaloupes aux bateaux oceaniques de 40 pieds, nous fabriquons des bateaux en aluminium sur mesure selon votre facon de pecher, de travailler et de naviguer. Chaque projet est pense pour la solidite, l'efficacite de l'amenagement et la durabilite.",
         svg: 'tools',
         src: tools,
-        alt: "Équipement lourd jaune et noir sur un champ d'herbe brune",
+        alt: 'Construction dun bateau en aluminium sur mesure',
         first: true,
       },
       {
-        heading: 'Tableaux de bord intuitifs',
+        heading: 'Reparations de bateaux et pieces fabriquees',
         content:
-          'Naviguez facilement avec les tableaux de bord intuitifs de ScrewFast. Configurez et supervisez vos projets de manière transparente, avec des interfaces conviviales conçues pour une gestion efficace des flux de travail rapide et efficace.',
+          "Nous realisons les reparations dont les proprietaires ont vraiment besoin : soudures fissurees, dommages structurels, ponts, tableaux arriere, trappes, supports, pieces uniques et reservoirs de carburant marins fabriques pour s'adapter correctement a votre bateau.",
         svg: 'dashboard',
         src: dashboard,
-        alt: "Capture d'écran ou représentation graphique du tableau de bord intuitif",
+        alt: 'Soudure marine et reparation sur mesure de bateau',
         second: true,
       },
       {
-        heading: 'Fonctionnalités robustes',
+        heading: 'Planchers marins UltraDeck',
         content:
-          'Minimisez la complexité, maximisez la productivité. Les fonctionnalités robustes de ScrewFast sont conçues pour rationaliser votre processus de construction, offrant des résultats qui se distinguent par leur excellence.',
+          "Ameliorez l'adherence, le confort et la finition avec une installation professionnelle de plancher marin UltraDeck. C'est une solution propre et durable pour les bateaux de peche, les bateaux de travail et les bateaux familiaux qui passent de vraies heures sur l'eau.",
         svg: 'house',
         src: construction,
-        alt: "Structure métallique grise d'un bâtiment près d'une grue à tour pendant la journée",
+        alt: 'Pont de bateau avec plancher marin premium',
       },
     ]}
   />
 
   <TestimonialsSection
-    title="Accélérez vos projets"
-    subTitle="Chez ScrewFast, nous assurons un démarrage rapide avec une configuration de compte instantanée. Découvrez la vitesse de la construction redéfinie."
+    title="Pour les chaloupes, les reparations et les bateaux offshore"
+    subTitle="Notre atelier se concentre sur ce qui compte le plus pour les proprietaires de bateaux : des soudures solides, une fabrication propre, des amenagements pratiques et des finitions marines qui tiennent dans des conditions exigeantes."
     testimonials={[
       {
         content:
-          "ScrewFast a considérablement augmenté l'efficacité de notre projet. La configuration a été instantanée et leurs temps de réponse rapides sont phénoménaux. Vraiment un changement de jeu dans le support matériel et de construction !",
-        author: 'Samantha Ruiz',
-        role: 'Directrice des opérations | ConstructIt Inc.',
+          "Nous avons apporte un bateau qui avait besoin de reparations, de pieces fabriquees et d'une solution de reservoir de carburant qui s'adaptait vraiment a la coque. Le resultat a ete un travail propre et solide qui a redonne confiance sur l'eau.",
+        author: 'Client reparation bateau',
+        role: 'Client fabrication marine',
         avatarSrc:
           'https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80',
       },
     ]}
     statistics={[
       {
-        count: '70k+',
+        count: 'Chaloupes',
         description:
-          'clients équipés — des bricoleurs aux grandes entreprises de construction',
+          'Amenagements et fabrications sur mesure pour bateaux utilitaires, de chasse et de peche',
       },
       {
-        count: '35%',
+        count: '40 pi',
         description:
-          "hausse de l'efficacité des projets avec les outils et services de ScrewFast",
+          'Capacite pour des bateaux en aluminium plus grands et des coques pretes pour le large',
       },
       {
-        count: '15,3%',
+        count: 'Reservoirs',
         description:
-          'réduction des coûts de maintenance rapportée par des clients à long terme',
+          'Construits avec trappes, supports, tableaux arriere et pieces marines sur mesure',
       },
       {
-        count: '2x',
-        description:
-          'assemblage plus rapide grâce à des solutions de fixation innovantes',
+        count: 'UltraDeck',
+        description: 'Plancher marin durable pour adherence, confort et finition',
       },
     ]}
   />
 
   <PricingSection pricing={pricing} />
 
-  <FAQ title="Questions<br />fréquemment posées" faqs={faqs} />
+  <FAQ title="Questions<br />frequemment posees" faqs={faqs} />
 
   <HeroSectionAlt
-    title="Construisons ensemble"
-    subTitle="ScrewFast est un modèle open source, méticuleusement conçu avec les frameworks Astro, Tailwind CSS et Preline UI."
-    url="https://github.com/mearashadowfax/ScrewFast"
+    title="Parlons de votre projet bateau"
+    subTitle="Que vous ayez besoin d'une construction sur mesure, d'une reparation structurelle, de pieces fabriquees, d'un nouveau reservoir ou d'un plancher marin UltraDeck, nous sommes prets a discuter du bon plan pour votre bateau."
+    btnTitle="Contacter latelier"
+    url={getRelativeLocaleUrl('fr', 'contact')}
   />
 </MainLayout>

@@ -1,29 +1,29 @@
 {
-  "subTitle": "Ask us anything about our brand and products, and get factual responses.",
+  "subTitle": "Questions about custom boat builds, marine repairs, fabricated parts, fuel tanks, or UltraDeck flooring?",
   "faqs": [
     {
-      "question": "What types of tools are included in the Starter Kit?",
-      "answer": "The Starter Kit features essential hand and power tools for diverse DIY projects, including hammers, drills, screwdrivers, and a variety of fasteners. It's a curated selection to help beginners and experienced DIYers alike tackle most home improvement tasks."
+      "question": "What kinds of boats do you work on?",
+      "answer": "We work on a wide range of aluminum boats, from small skiffs to 40 ft ocean boats. That includes fishing boats, workboats, utility boats, and other marine projects that need custom fabrication or repair."
     },
     {
-      "question": "Can I upgrade from the Starter Kit to the Professional Toolbox?",
-      "answer": "Absolutely! You can upgrade to the Professional Toolbox at any time to access a wider range of high-quality tools, enjoy priority customer support, and receive exclusive content. Contact our support team for a seamless transition."
+      "question": "Do you only build boats, or do you also handle repairs?",
+      "answer": "Repairs are a major part of our work. We handle structural boat repairs, cracked or failed welds, fabricated replacement parts, deck and transom work, and other custom repair jobs that keep boats safe and functional."
     },
     {
-      "question": "What discounts are available for bulk orders through the Professional Toolbox plan?",
-      "answer": "Professional Toolbox members are entitled to exclusive discounts on bulk orders, the percentage of which may vary depending on the order volume. Get in touch with us to discuss your needs, and we'll provide a tailored discount structure."
+      "question": "Can you fabricate custom boat parts and fuel tanks?",
+      "answer": "Yes. We regularly build custom marine parts such as brackets, hatches, consoles, transoms, and fuel tanks. Everything is fabricated to suit the boat, the space available, and the intended use."
     },
     {
-      "question": "What kind of customer support can I expect?",
-      "answer": "All our customers receive dedicated email support. With the Starter Kit, you'll receive our standard support, while the Professional Toolbox plan upgrades you to priority support, meaning faster response times and specialized assistance."
+      "question": "Do you install UltraDeck marine flooring?",
+      "answer": "Yes. We install UltraDeck marine flooring for boat owners who want better traction, comfort, and a cleaner finished look. It is a strong option for fishing boats, workboats, and family boats alike."
     },
     {
-      "question": "How current are the online resources and tutorials?",
-      "answer": "We regularly update our online resources and tutorials to reflect the latest trends in DIY and construction, as well as introductions to new tools and techniques. Our material aims to be comprehensive and user-friendly for all skill levels."
+      "question": "How do you price custom boat builds and repair work?",
+      "answer": "Every project is quoted based on the boat, the scope of work, materials, and fabrication complexity. That lets us provide realistic pricing for anything from a small repair to a full custom build."
     },
     {
-      "question": "Does ScrewFast offer services for large-scale construction projects?",
-      "answer": "Yes, our Enterprise Solutions are designed for larger companies requiring comprehensive services. We provide consultation, planning, and supply of high-grade tools and materials, as well as staffing solutions for substantial construction needs. Contact us for a customized quote."
+      "question": "How do I get a quote for my boat project?",
+      "answer": "Reach out through the contact page with details about your boat, the work needed, and any photos or measurements you have. We will review the project and follow up with the next steps for quoting."
     }
   ]
 }

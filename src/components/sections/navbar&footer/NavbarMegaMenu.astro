@@ -3,11 +3,9 @@
 import ThemeIcon from '@components/ThemeIcon.astro';
 import NavLink from '@components/ui/links/NavLink.astro';
 import MegaMenuLink from '@components/ui/links/MegaMenuLink.astro';
-import Authentication from '../misc/Authentication.astro';
 import enStrings from '@utils/navigation.ts';
 import frStrings from '@utils/fr/navigation.ts';
 import BrandLogo from '@components/BrandLogo.astro';
-import LanguagePicker from '@components/ui/LanguagePicker.astro';
 
 // Select the correct translation based on the page's lang prop:
 const strings = Astro.currentLocale === 'fr' ? frStrings : enStrings;
@@ -20,7 +18,7 @@ const homeUrl = Astro.currentLocale === 'fr' ? '/fr' : '/';
 >
   {/* Navigation container */}
   <nav
-    class="relative mx-2 w-full rounded-[36px] border border-yellow-100/40 bg-yellow-50/60 px-4 py-3 backdrop-blur-md md:flex md:items-center md:justify-between md:px-6 md:py-0 lg:px-8 xl:mx-auto dark:border-neutral-700/40 dark:bg-neutral-800/80 dark:backdrop-blur-md"
+    class="relative mx-2 w-full rounded-[36px] border border-orange-100/50 bg-orange-50/60 px-4 py-3 backdrop-blur-md md:flex md:items-center md:justify-between md:px-6 md:py-0 lg:px-8 xl:mx-auto dark:border-neutral-700/40 dark:bg-neutral-800/80 dark:backdrop-blur-md"
     aria-label="Global"
   >
     <div class="flex items-center justify-between">
@@ -86,7 +84,7 @@ const homeUrl = Astro.currentLocale === 'fr' ? '/fr' : '/';
       <div
         class="mt-5 flex flex-col gap-x-0 gap-y-4 md:mt-0 md:flex-row md:items-center md:justify-end md:gap-x-4 md:gap-y-0 md:ps-7 lg:gap-x-7"
       >
-        {/* Navigation links and Authentication component */}
+        {/* Navigation links */}
         {
           strings.navBarLinks.map(link => {
             if (link.name === 'Services') {
@@ -96,9 +94,6 @@ const homeUrl = Astro.currentLocale === 'fr' ? '/fr' : '/';
             }
           })
         }
-
-        <Authentication />
-        <LanguagePicker />
         {/* ThemeIcon component specifically for larger screens */}
         <span class="hidden md:inline-block">
           <ThemeIcon />
