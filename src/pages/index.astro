@@ -10,127 +10,114 @@ import TestimonialsSection from '@components/sections/testimonials/TestimonialsS
 import PricingSection from '@components/sections/pricing/PricingSection.astro';
 import FAQ from '@components/sections/misc/FAQ.astro';
 import AnnouncementBanner from '@components/ui/banners/AnnouncementBanner.astro';
-import heroImage from '@images/hero-image.avif';
+import heroImage from '@images/homepage_boat.png';
 import faqs from '@data/faqs.json';
 import features from '@data/features.json';
 import pricing from '@data/pricing.json';
-import featureImage from '@images/features-image.avif';
-import construction from '@images/construction-image.avif';
-import tools from '@images/automated-tools.avif';
-import dashboard from '@images/dashboard-image.avif';
+import featureImage from '@images/features-image.png';
+import construction from '@images/marine_deck4.jpg';
+import tools from '@images/process_1.jpg';
+import dashboard from '@images/welds_3.jpg';
 import { partnersData } from '@/data_files/constants';
-
-const avatarSrcs: Array<string> = [
-  'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80',
-  'https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80',
-  'https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80',
-  'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80',
-];
 ---
 
 <MainLayout>
   <AnnouncementBanner
     btnId="dismiss-button"
-    btnTitle="Explore ScrewFast on GitHub"
-    url="https://github.com/mearashadowfax/ScrewFast"
+    title="Need marine welding, custom fabrication, or UltraDeck flooring for your boat?"
+    btnTitle="Request a Quote"
+    url="/contact"
   />
 
   <HeroSection
-    title=`Equip Your Projects with <span
-        class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>`
-    subTitle="Top-quality hardware tools and expert construction services for every project need."
-    primaryBtn="Start Exploring"
-    primaryBtnURL="/products"
-    secondaryBtn="Contact Sales Team"
+    title=`Custom <span class="text-orange-400 dark:text-orange-300">Boat Builds</span>, Marine Repairs, and UltraDeck Flooring`
+    subTitle="Marine welding and fabrication shop specializing in custom boat builds, structural boat repairs, fabricated parts, fuel tanks, and UltraDeck marine flooring for everything from small skiffs to 40 ft ocean boats."
+    primaryBtn="View Services"
+    primaryBtnURL="/services"
+    secondaryBtn="Request a Quote"
     secondaryBtnURL="/contact"
-    withReview={true}
-    avatars={avatarSrcs}
-    rating=`<span class="font-bold">4.8</span> / 5`
-    starCount={4}
-    reviews=`From Over <span class="font-bold">12.8k</span> Reviews`
     src={heroImage}
-    alt="Stack of ScrewFast product boxes containing assorted hardware tools"
+    alt="Custom aluminum boat showcasing marine fabrication craftsmanship"
   />
 
   <ClientsSection
-    title="Trusted by Industry Leaders"
-    subTitle="Experience the reliability chosen by industry giants."
+    title="Built for Boat Owners, Captains, and Working Crews"
+    subTitle="Dependable marine fabrication for recreational, commercial, and offshore boats."
     partners={partnersData}
   />
 
   <FeaturesGeneral
-    title="Meeting Industry Demands"
-    subTitle="At ScrewFast, we tackle the unique challenges encountered in the hardware and construction sectors. From cutting-edge tools to expert services, we're dedicated to helping you overcome obstacles and achieve your goals."
+    title="Marine Fabrication That Solves Real Boat Problems"
+    subTitle="We build and repair hard-working aluminum boats with a practical, marine-first approach. Whether you need a custom hull, a repaired transom, a fabricated bracket, or a new fuel tank, our shop delivers durable work designed for life on the water."
     src={featureImage}
-    alt="ScrewFast products in floating boxes"
+    alt="Marine fabrication and boat repair workmanship"
     features={features}
   />
 
   <FeaturesNavs
-    title=`Customize <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>'s offerings to perfectly suit your hardware and construction needs.`
+    title=`Three core services for <span class="text-orange-400 dark:text-orange-300">serious marine work</span>.`
     tabs={[
       {
-        heading: 'Cutting-Edge Tools',
+        heading: 'Custom Boat Builds',
         content:
-          "Empower your projects with ScrewFast's cutting-edge tools. Experience enhanced efficiency in construction management with our sophisticated automated solutions.",
+          'From compact skiffs to 40 ft ocean boats, we fabricate custom aluminum boats around the way you fish, work, and run offshore. Every build is tailored for strength, layout efficiency, and long-term durability.',
         svg: 'tools',
         src: tools,
-        alt: 'Yellow and black heavy equipment on brown grass field',
+        alt: 'Custom aluminum boat build in progress',
         first: true,
       },
       {
-        heading: 'Intuitive Dashboards',
+        heading: 'Boat Repairs & Fabricated Parts',
         content:
-          "Navigate with ease using ScrewFast's intuitive dashboards. Set up and oversee your projects seamlessly, with user-friendly interfaces designed for quick and effective workflow management.",
+          'We handle the repair work boat owners actually need: cracked welds, structural damage, deck repairs, transoms, hatches, fabricated brackets, one-off parts, and marine fuel tanks built to fit your boat correctly.',
         svg: 'dashboard',
         src: dashboard,
-        alt: 'A screenshot or graphic representation of the intuitive dashboard',
+        alt: 'Marine welding and custom boat repair work',
         second: true,
       },
       {
-        heading: 'Robust Features',
+        heading: 'UltraDeck Marine Flooring',
         content:
-          "Minimize complexity, maximize productivity. ScrewFast's robust features are engineered to streamline your construction process, delivering results that stand out for their excellence.",
+          'Upgrade traction, comfort, and finish with professionally installed UltraDeck marine flooring. It is a clean, durable solution for fishing boats, workboats, and family boats that spend real time on the water.',
         svg: 'house',
         src: construction,
-        alt: 'Gray metal building frame near tower crane during daytime',
+        alt: 'Boat deck with premium marine flooring',
       },
     ]}
   />
 
   <TestimonialsSection
-    title="Fast-Track Your Projects"
-    subTitle="At ScrewFast, we ensure a swift start with instant account setup. Experience the speed of construction redefined."
-    ;
+    title="Built for Skiffs, Repairs, and Offshore Boats"
+    subTitle="Our shop focuses on the work that matters most to boat owners: strong welds, clean fabrication, practical layouts, and marine-grade finishes that hold up in demanding conditions."
     testimonials={[
       {
         content:
-          'ScrewFast dramatically boosted our project efficiency. Setup was instant, and their rapid response times are phenomenal. Truly a game-changer in hardware and construction support!',
-        author: 'Samantha Ruiz',
-        role: 'Chief Operating Officer | ConstructIt Inc.',
+          'We brought in a boat that needed repair work, fabricated parts, and a fuel tank solution that actually fit the hull. The result was clean, solid work that made the boat feel dependable again.',
+        author: 'Boat Repair Client',
+        role: 'Marine fabrication customer',
         avatarSrc:
           'https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80',
       },
     ]}
     statistics={[
       {
-        count: '70k+',
+        count: 'Skiffs',
         description:
-          'customers equipped — from DIY to major construction firms',
+          'Custom layouts and fabrication for small utility, hunting, and fishing boats',
       },
       {
-        count: '35%',
+        count: '40 ft',
         description:
-          'uptick in project efficiency with ScrewFast tools and services',
+          'Capability for larger custom aluminum boats and ocean-ready hulls',
       },
       {
-        count: '15.3%',
+        count: 'Fuel tanks',
         description:
-          'reduction in maintenance costs reported by long-term clients',
+          'Built alongside hatches, brackets, transoms, and made-to-fit marine parts',
       },
       {
-        count: '2x',
-        description: 'quicker assembly using innovative fastening solutions',
+        count: 'UltraDeck',
+        description: 'Durable marine flooring installed for traction, comfort, and finish',
       },
     ]}
   />
@@ -140,8 +127,9 @@ const avatarSrcs: Array<string> = [
   <FAQ title="Frequently<br />asked questions" faqs={faqs} />
 
   <HeroSectionAlt
-    title="Let's Build Together"
-    subTitle="ScrewFast is an open-source template, meticulously crafted with Astro, Tailwind CSS, and Preline UI frameworks."
-    url="https://github.com/mearashadowfax/ScrewFast"
+    title="Bring Your Boat Project to the Shop"
+    subTitle="Whether you need a custom boat build, structural repair, fabricated parts, a new fuel tank, or UltraDeck marine flooring, we are ready to talk through the job and build the right solution."
+    btnTitle="Contact the Shop"
+    url="/contact"
   />
 </MainLayout>
